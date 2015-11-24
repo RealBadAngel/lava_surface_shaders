@@ -81,9 +81,9 @@ void main(void)
 	worldPosition = (mWorld * gl_Vertex).xyz;
 	vec3 sunPosition = vec3 (0.0, eyePosition.y * BS + 900.0, 0.0);
 
-	normal = normalize(gl_Normal);
-	tangent = normalize(gl_MultiTexCoord1.xyz);
-	binormal = normalize(gl_MultiTexCoord2.xyz);
+	normal = normalize(gl_NormalMatrix * gl_Normal);
+	tangent = normalize(gl_NormalMatrix * gl_MultiTexCoord1.xyz);
+	binormal = normalize(gl_NormalMatrix * gl_MultiTexCoord2.xyz);
 
 	vec3 v;
 

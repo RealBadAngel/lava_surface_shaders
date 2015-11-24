@@ -103,7 +103,7 @@ void main(void)
 	//T2= uv;
 	
 	vec2 eyeRay = vec2 (tsEyeVec.x, tsEyeVec.y);
-	vec2 ds = eyeRay * 0.08;
+	vec2 ds = eyeRay * 0.10;
 	float dist = find_intersection(T2, ds);
 	T2 += dist * ds;
 	T1 += dist * ds;
